@@ -31,10 +31,8 @@ const Acesso: React.FC = () => {
 
   const handleChange = ((e: React.FocusEvent<HTMLInputElement>): void => {
     if(e.target.name === 'email'){
-      console.log("Valor de e-mail = "+e.target.value);
       setEmail(e.target.value);
     } else if(e.target.name === 'senha'){
-      console.log("Valor de senha = "+e.target.value);
       setSenha(e.target.value);
     }
     localStorage.setItem(e.target.name, e.target.value);
@@ -85,7 +83,7 @@ const Acesso: React.FC = () => {
         <br/>
         <div style={{alignSelf:'center'}}>
           <label style={{fontFamily:'sans-serif', fontSize: 12}}>Não possui conta ainda?</label>
-          <a onClick={onClick} style={{fontFamily:'sans-serif', fontSize: 12, fontStyle: 'bold'}}> Registre-se aqui</a><br/><br/>
+          <a href="#" onClick={onClick} style={{fontFamily:'sans-serif', fontSize: 12, fontStyle: 'bold'}}> Registre-se aqui</a><br/><br/>
           <Button variant="contained" onClick={handleLogin} style={{fontFamily:'sans-serif', fontSize: 12, backgroundColor: 'green', color:'white', width: 200, paddingTop: 10, paddingBottom: 5, fontWeight: 'bold'}}>
             { exibeCampo ? 'Cadastrar' : 'Entrar' }
           </Button>
