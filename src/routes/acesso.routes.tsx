@@ -6,7 +6,6 @@ import Inicio from '../pages/Inicio/Index';
 const RotasAcesso: React.FC = () => (
     <BrowserRouter>
       <Route path="/" component={Acesso} />
-      <Route path="/cadastrar" component={Acesso} />
       <Route path="/logado" component={Inicio} />
     </BrowserRouter>
   );

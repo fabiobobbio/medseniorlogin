@@ -8,8 +8,12 @@ import Loading from './loading';
 const Routes: React.FC = () => {
   const { logado, loading } = useAuth();
 
-  if(loading){
-    <Loading />
+  if (loading) {
+    return (
+      <div style={{ flex: 1, justifyContent: "center", paddingTop:400, paddingLeft: 800 }}>
+        <Loading />
+      </div>
+    );
   }
   
   return logado ? <RotasApp /> : <RotasAcesso />;

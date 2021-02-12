@@ -71,4 +71,4 @@ function useAuth() {
   return context;
 }
 
-export {AuthProvider, AuthContext, useAuth};
+export {AuthProvider, useAuth};
