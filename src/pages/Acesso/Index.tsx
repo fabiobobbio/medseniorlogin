@@ -85,7 +85,7 @@ const Acesso: React.FC = () => {
         <br/>
         <div style={{alignSelf:'center'}}>
           <label style={{fontFamily:'sans-serif', fontSize: 12}}>Não possui conta ainda?</label>
-          <a href="/" onClick={onClick}> Registre-se aqui</a><br/><br/>
+          <a onClick={onClick} style={{fontFamily:'sans-serif', fontSize: 12, fontStyle: 'bold'}}> Registre-se aqui</a><br/><br/>
           <Button variant="contained" onClick={handleLogin} style={{fontFamily:'sans-serif', fontSize: 12, backgroundColor: 'green', color:'white', width: 200, paddingTop: 10, paddingBottom: 5, fontWeight: 'bold'}}>
             { exibeCampo ? 'Cadastrar' : 'Entrar' }
           </Button>
