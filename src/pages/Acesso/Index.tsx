@@ -29,14 +29,14 @@ const Acesso: React.FC = () => {
     signIn();
   }
 
-  const handleChange = ((e: React.ChangeEvent<HTMLInputElement>): void => {
-
+  const handleChange = ((e: React.FocusEvent<HTMLInputElement>): void => {
     if(e.target.name === 'email'){
+      console.log("Valor de e-mail = "+e.target.value);
       setEmail(e.target.value);
     } else if(e.target.name === 'senha'){
+      console.log("Valor de senha = "+e.target.value);
       setSenha(e.target.value);
     }
-
     localStorage.setItem(e.target.name, e.target.value);
   })
   
@@ -71,11 +71,11 @@ const Acesso: React.FC = () => {
         </div>
         <br/>
         <Form.Group controlId="inputEmail" style={{alignItems: 'left'}}>
-          <TextField id="email" label="E-mail" variant="filled" autoFocus onChange={handleChange} name="email" type="email" ref={register} style={{alignItems: 'left', width: 350}}/>
+          <TextField id="email" label="E-mail" variant="filled" autoFocus onBlur={handleChange} name="email" type="email" ref={register} style={{alignItems: 'left', width: 350}}/>
         </Form.Group>
         <br/>
         <Form.Group controlId="password">
-          <TextField id="senha" label="Senha" variant="filled" autoFocus onChange={handleChange} name="senha" type={passwordShown ? "text" : "password"} ref={register} style={{alignItems: 'left', width: 350}}/>
+          <TextField id="senha" label="Senha" variant="filled" autoFocus onBlur={handleChange} name="senha" type={passwordShown ? "text" : "password"} ref={register} style={{alignItems: 'left', width: 350}}/>
           <span style={{position: 'absolute'}}>
             <i onClick={togglePasswordVisiblity}>{eye}</i>
           </span>
